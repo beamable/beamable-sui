@@ -7,7 +7,13 @@ Welcome to the unified repository for our cross-platform SUI integration. This m
 ## 📦 Repository Overview
 
 ---
-
+## ⚙️ Prerequisites 
+This repository uses [Git LFS](https://git-lfs.github.com/) to manage large binary assets 
+(Unity and Unreal files such as `.umap`, `.uasset`, `.fbx`, `.psd`, `.zip`, etc.). 
+Before cloning, ensure Git LFS is installed: 
+```bash 
+git lfs install git clone <repo-url>
+```
 ## 🎮 Project Components
 
 ### 🧠 Unity Game Sample
