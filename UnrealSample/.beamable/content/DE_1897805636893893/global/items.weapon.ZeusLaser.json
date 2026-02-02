@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "clientPermission": {
+      "data": {
+        "write_self": true
+      }
+    },
+    "customProperties": {
+      "data": {}
+    },
+    "description": {
+      "data": "Laser forged by Zeus himself"
+    },
+    "external": {
+      "data": {
+        "service": "SuiFederation",
+        "namespace": "SuiIdentity"
+      }
+    },
+    "image": {
+      "data": "https://cdn.pixabay.com/photo/2025/08/07/18/27/zeus-9761406_1280.png"
+    },
+    "name": {
+      "data": "Zeus Laser"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "68c02f068bef4f0f5fc82ca9"
+}

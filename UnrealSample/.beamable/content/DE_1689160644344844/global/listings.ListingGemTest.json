@@ -1,0 +1,59 @@
+{
+  "properties": {
+    "offer": {
+      "data": {
+        "obtainCurrency": [],
+        "obtainItems": []
+      }
+    },
+    "price": {
+      "data": {
+        "amount": 250,
+        "symbol": "skus.SkusGemTest",
+        "type": "skus"
+      }
+    },
+    "schedule": {
+      "data": {
+        "activeFrom": "2025-04-28T13:44:02Z",
+        "definitions": [
+          {
+            "dayOfMonth": [
+              "*"
+            ],
+            "dayOfWeek": [
+              "*"
+            ],
+            "hour": [
+              "17"
+            ],
+            "minute": [
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27"
+            ],
+            "month": [
+              "*"
+            ],
+            "second": [
+              "*"
+            ],
+            "year": [
+              "*"
+            ]
+          }
+        ],
+        "description": "2"
+      }
+    },
+    "scheduleInstancePurchaseLimit": {
+      "data": 7
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "682b548d9ce75508ad8754d3"
+}

@@ -1,0 +1,14 @@
+.idea/
+*.DotSettings.user
+
+# Visual Studio
+.vs/
+*.csproj.user
+
+# Build results
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/

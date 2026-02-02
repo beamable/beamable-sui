@@ -1,0 +1,31 @@
+{
+  "properties": {
+    "isFirstTime": {
+      "data": true
+    },
+    "leaderboardUpdates": {
+      "data": []
+    },
+    "numericRules": {
+      "data": []
+    },
+    "rewards": {
+      "data": []
+    },
+    "stringRules": {
+      "data": []
+    },
+    "teams": {
+      "data": [
+        {
+          "maxPlayers": 10,
+          "name": "TeamName"
+        }
+      ]
+    }
+  },
+  "tags": [
+    "base"
+  ],
+  "referenceManifestId": "682b548d9ce75508ad8754d3"
+}

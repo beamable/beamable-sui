@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "clientPermission": {
+      "data": {
+        "write_self": true
+      }
+    },
+    "customProperties": {
+      "data": {}
+    },
+    "description": {
+      "data": "This mod improves the Fire Rate of your laser"
+    },
+    "external": {
+      "data": {
+        "service": "SuiFederation",
+        "namespace": "SuiIdentity"
+      }
+    },
+    "image": {
+      "data": "https://cdn.pixabay.com/photo/2025/08/20/14/40/laser-9785796_1280.png"
+    },
+    "name": {
+      "data": "Fire Rate Mod"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "68c02f068bef4f0f5fc82ca9"
+}

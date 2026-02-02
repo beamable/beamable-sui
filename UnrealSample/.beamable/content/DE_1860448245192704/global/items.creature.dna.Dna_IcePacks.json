@@ -1,0 +1,37 @@
+{
+  "properties": {
+    "clientPermission": {
+      "data": {
+        "write_self": true
+      }
+    },
+    "customProperties": {
+      "data": {
+        "level": "1"
+      }
+    },
+    "description": {
+      "data": "Throws an icey arrow at a signle target"
+    },
+    "external": {
+      "data": {
+        "namespace": "SuiIdentity",
+        "service": "SuiFederation"
+      }
+    },
+    "icon": {
+      "data": {
+        "referenceKey": "",
+        "subObjectName": ""
+      }
+    },
+    "image": {
+      "data": "https://content.beamable.com/1488374515021844/DE_1694803355655170/binary/public/nim_solar-d6808bfc-3c1a-401c-ad15-8ca55c56f0b1.jpg/c3dd5ada38cf2b4f29ee5024bf7c7c8c"
+    },
+    "name": {
+      "data": "Ice Packs"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "6890de286e95352511423cec"
+}

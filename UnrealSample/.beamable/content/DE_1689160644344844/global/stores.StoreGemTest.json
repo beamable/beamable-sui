@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "listings": {
+      "links": [
+        "listings.ListingGemTest2"
+      ]
+    },
+    "showInactiveListings": {
+      "data": false
+    },
+    "title": {
+      "data": "Gem Store TEst"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "682b548d9ce75508ad8754d3"
+}

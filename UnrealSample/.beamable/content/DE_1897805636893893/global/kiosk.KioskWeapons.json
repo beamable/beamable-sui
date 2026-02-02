@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "currencySymbol": {
+      "data": "currency.coin.beam"
+    },
+    "itemType": {
+      "data": "items.weapon"
+    },
+    "kioskName": {
+      "data": "Weapons"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "68c02f068bef4f0f5fc82ca9"
+}
