@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: c7ee800bd160f6145983406a107a069f
+  m_SerializeEntries:
+  - m_GUID: 03da7715b0e5224409e499a9b6a31ced
+    m_Address: Assets/Game/Texture/Weapons/Star_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05fcc894511655a4e88c7bf1c098a5d8
+    m_Address: Assets/Game/Texture/Weapons/Weapon - Spear.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10ecbb552394de84790ae267c0257d58
+    m_Address: Assets/Game/Texture/Weapons/Hammer_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1365f6bff135e0e4c8be704a5dc4f0cb
+    m_Address: Assets/Game/Texture/Weapons/Weapon - Sword.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d5908bdab09d044b88b3c800313c3db
+    m_Address: Assets/Game/Texture/Weapons/Sword_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24e92963692f9154bb3a13f09593e208
+    m_Address: Assets/Game/Texture/Weapons/Weapon - Shiv.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28ff441450dfa25448e78720b10ca137
+    m_Address: Assets/Game/Texture/Coins/Star/Silver_21.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e2e0076e56517e4d8d587dc14815641
+    m_Address: Assets/Game/Texture/Weapons/Spear_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e7f451284ec95347b9b3dca3c4e79c2
+    m_Address: Assets/Game/Texture/Weapons/Shivs_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53ebb54813ce0a844adcce3e194fd0e6
+    m_Address: Assets/Game/Texture/Weapons/Weapon - Star.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57864d5407965cf40a1514e3305d1884
+    m_Address: Assets/Game/Texture/Weapons/Weapon - Hammer.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e3f1a90d2e5ff143b5716655dd83e70
+    m_Address: Assets/Game/Texture/Coins/Beam/Bronze_11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e867e7f7f1ee8654c8f2a3ece672be35
+    m_Address: Assets/Game/Texture/Coins/Gold/Gold_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a986661620ef8c04e9aa01eeac7ba114, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3afebf2d1f1178b489305bb7a38a1b33, type: 2}
+    - {fileID: 11400000, guid: 8f4c21903c6b50143a151f9f6fe361e3, type: 2}

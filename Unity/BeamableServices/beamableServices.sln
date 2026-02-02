@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuiFederation", "..\microservices\services\SuiFederation\SuiFederation.csproj", "{916F7A11-CEA4-4ABB-971C-19D3565424C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuiFederationStorage", "..\microservices\services\SuiFederationStorage\SuiFederationStorage.csproj", "{DF82CB8B-285B-4FCC-A926-0A630032FEDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuiFederation", "..\..\Microservices\services\SuiFederation\SuiFederation.csproj", "{D9DD4770-B7A8-421B-A7A5-69CA642FF2FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveOpsDemoMS", "..\..\Microservices\services\UnrealSuiServices\LiveOpsDemoMS.csproj", "{B7B7A2A1-759E-4A5F-BD0A-B22BE0153F93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuiFederationStorage", "..\..\Microservices\services\SuiFederationStorage\SuiFederationStorage.csproj", "{B36B49B9-AF51-43C9-BC57-0111E36E515E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveOpsDemoMS", "..\..\Microservices\services\LiveOpsDemoMS\LiveOpsDemoMS.csproj", "{400E0652-78E8-49B0-8714-609827D46D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuiFederation", "..\services\SuiFederation\SuiFederation.csproj", "{2F70D21B-B977-42F6-851B-28645ECEC021}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuiFederationStorage", "..\services\SuiFederationStorage\SuiFederationStorage.csproj", "{BD828C14-E87D-47B6-9641-AC371B35B3AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{916F7A11-CEA4-4ABB-971C-19D3565424C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916F7A11-CEA4-4ABB-971C-19D3565424C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916F7A11-CEA4-4ABB-971C-19D3565424C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916F7A11-CEA4-4ABB-971C-19D3565424C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF82CB8B-285B-4FCC-A926-0A630032FEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF82CB8B-285B-4FCC-A926-0A630032FEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF82CB8B-285B-4FCC-A926-0A630032FEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF82CB8B-285B-4FCC-A926-0A630032FEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9DD4770-B7A8-421B-A7A5-69CA642FF2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DD4770-B7A8-421B-A7A5-69CA642FF2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DD4770-B7A8-421B-A7A5-69CA642FF2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DD4770-B7A8-421B-A7A5-69CA642FF2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7B7A2A1-759E-4A5F-BD0A-B22BE0153F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7B7A2A1-759E-4A5F-BD0A-B22BE0153F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7B7A2A1-759E-4A5F-BD0A-B22BE0153F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7B7A2A1-759E-4A5F-BD0A-B22BE0153F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B36B49B9-AF51-43C9-BC57-0111E36E515E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36B49B9-AF51-43C9-BC57-0111E36E515E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36B49B9-AF51-43C9-BC57-0111E36E515E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36B49B9-AF51-43C9-BC57-0111E36E515E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{400E0652-78E8-49B0-8714-609827D46D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{400E0652-78E8-49B0-8714-609827D46D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{400E0652-78E8-49B0-8714-609827D46D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{400E0652-78E8-49B0-8714-609827D46D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F70D21B-B977-42F6-851B-28645ECEC021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F70D21B-B977-42F6-851B-28645ECEC021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F70D21B-B977-42F6-851B-28645ECEC021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F70D21B-B977-42F6-851B-28645ECEC021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD828C14-E87D-47B6-9641-AC371B35B3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD828C14-E87D-47B6-9641-AC371B35B3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD828C14-E87D-47B6-9641-AC371B35B3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD828C14-E87D-47B6-9641-AC371B35B3AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

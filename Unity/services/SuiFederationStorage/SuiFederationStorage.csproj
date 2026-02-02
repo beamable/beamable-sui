@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup Label="Beamable Settings">
+        <BeamProjectType>storage</BeamProjectType>
+        <SuiFederationStorageDockerDataVolume>beamable_storage_SuiFederationStorage_data</SuiFederationStorageDockerDataVolume>
+        <SuiFederationStorageDockerFilesVolume>beamable_storage_SuiFederationStorage_files</SuiFederationStorageDockerFilesVolume>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Dotnet Settings">
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Beamable Version" Condition="$(DOTNET_RUNNING_IN_CONTAINER)!=true">
+        <DotNetConfigPath Condition="'$(DotNetConfigPath)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove("$(MSBuildProjectDirectory)/..", ".config/dotnet-tools.json"))</DotNetConfigPath>
+        <DotNetConfig Condition="'$(DotNetConfig)' == ''">$([System.IO.File]::ReadAllText("$(DotNetConfigPath)/.config/dotnet-tools.json"))</DotNetConfig>
+        <BeamableVersion Condition="'$(BeamableVersion)' == ''">$([System.Text.RegularExpressions.Regex]::Match("$(DotNetConfig)", "beamable.*?\"([0-9]+\.[0-9]+\.[0-9]+.*?)\",", RegexOptions.Singleline | RegexOptions.IgnorePatternWhitespace).Groups[1].Value)</BeamableVersion>
+    </PropertyGroup>
+
+    <ItemGroup Label="Nuget References">
+        <PackageReference Include="Beamable.Microservice.Runtime" Version="$(BeamableVersion)" />
+        <PackageReference Include="MongoDB.Driver" Version="3.3.0" />
+    </ItemGroup>
+</Project>

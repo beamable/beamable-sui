@@ -1,0 +1,37 @@
+{
+  "properties": {
+    "clientPermission": {
+      "data": {
+        "write_self": true
+      }
+    },
+    "customProperties": {
+      "data": {
+        "level": "1"
+      }
+    },
+    "description": {
+      "data": "Coming from the depth of hell, to light you on fire."
+    },
+    "external": {
+      "data": {
+        "namespace": "SuiIdentity",
+        "service": "SuiFederation"
+      }
+    },
+    "icon": {
+      "data": {
+        "referenceKey": "",
+        "subObjectName": ""
+      }
+    },
+    "image": {
+      "data": "https://content.beamable.com/1488374515021844/DE_1694803355655170/binary/public/nim_desert-07fe854e-5852-4749-ac5a-ae6022f6131b.jpg/30ddc0d5d15c1089c9915409aaa0aeef"
+    },
+    "name": {
+      "data": "Hellfire "
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "68b7006a6dde4132aded7280"
+}

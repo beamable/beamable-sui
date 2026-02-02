@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "activeDurationCoolDownSeconds": {
+      "data": 10
+    },
+    "activeDurationPurchaseLimit": {
+      "data": 6
+    },
+    "activeDurationSeconds": {
+      "data": 10
+    },
+    "offer": {
+      "data": {
+        "obtainCurrency": [],
+        "obtainItems": []
+      }
+    },
+    "price": {
+      "data": {
+        "amount": 250,
+        "symbol": "skus.SkusGemTest",
+        "type": "skus"
+      }
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "682b548d9ce75508ad8754d3"
+}

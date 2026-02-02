@@ -1,0 +1,37 @@
+{
+  "properties": {
+    "clientPermission": {
+      "data": {
+        "write_self": true
+      }
+    },
+    "customProperties": {
+      "data": {
+        "level": "1"
+      }
+    },
+    "description": {
+      "data": "Allows a fire burst that damages other enemies around it"
+    },
+    "external": {
+      "data": {
+        "namespace": "SuiIdentity",
+        "service": "SuiFederation"
+      }
+    },
+    "icon": {
+      "data": {
+        "referenceKey": "",
+        "subObjectName": ""
+      }
+    },
+    "image": {
+      "data": "https://content.beamable.com/1488374515021844/DE_1694803355655170/binary/public/nim_wings-f3fbf4e2-2f00-40b2-a5be-6bfc29042fb1.jpg/aff3d18364f9adba2f8e1f32da0f4fbb"
+    },
+    "name": {
+      "data": "Fire Burst"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "68b7006a6dde4132aded7280"
+}

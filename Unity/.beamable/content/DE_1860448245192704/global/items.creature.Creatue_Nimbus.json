@@ -1,0 +1,37 @@
+{
+  "properties": {
+    "clientPermission": {
+      "data": {
+        "write_self": true
+      }
+    },
+    "customProperties": {
+      "data": {
+        "power": "power"
+      }
+    },
+    "description": {
+      "data": "Fire moth that glows in the dark"
+    },
+    "external": {
+      "data": {
+        "namespace": "SuiIdentity",
+        "service": "SuiFederation"
+      }
+    },
+    "icon": {
+      "data": {
+        "referenceKey": "",
+        "subObjectName": ""
+      }
+    },
+    "image": {
+      "data": "https://content.beamable.com/1488374515021844/DE_1694803355655170/binary/public/nimbokri-1c3543cc-0db0-4ef8-b0a0-d02fd6cadd38.jpg/04cbc36fd4678e52137e9686fa2df093"
+    },
+    "name": {
+      "data": "Nimbokri"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "68b9860ca2f4d5618f116981"
+}

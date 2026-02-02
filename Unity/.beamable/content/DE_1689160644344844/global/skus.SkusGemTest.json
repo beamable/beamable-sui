@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "description": {
+      "data": "Gem Bundle Test"
+    },
+    "productIds": {
+      "data": {
+        "googleplay": "250_gems"
+      }
+    },
+    "realPrice": {
+      "data": 250
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "682b548d9ce75508ad8754d3"
+}

@@ -1,0 +1,39 @@
+{
+  "properties": {
+    "clientPermission": {
+      "data": {
+        "write_self": true
+      }
+    },
+    "customProperties": {
+      "data": {
+        "Damage": "30",
+        "AttackSpeed": "1",
+        "AttackType": "2"
+      }
+    },
+    "description": {
+      "data": "This sword is said to have the power to control water."
+    },
+    "external": {
+      "data": {
+        "namespace": "SuiIdentity",
+        "service": "SuiFederation"
+      }
+    },
+    "icon": {
+      "data": {
+        "referenceKey": "",
+        "subObjectName": ""
+      }
+    },
+    "image": {
+      "data": "https://cdn.pixabay.com/photo/2019/04/05/15/01/katana-4105189_1280.png"
+    },
+    "name": {
+      "data": "Shisui"
+    }
+  },
+  "tags": [],
+  "referenceManifestId": "68b7006a6dde4132aded7280"
+}
