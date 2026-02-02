@@ -1,0 +1,77 @@
+name: Deploy microservices
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Deployment target
+        options:
+          - Unity
+          - Unreal
+        required: true
+        type: choice
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    timeout-minutes: 15
+    steps:
+      - name: Disable IPv6
+        run: |
+          sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+          sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+          sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          lfs: 'true'
+
+      - name: Setup .NET SDK 8.0
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Beamable Login
+        timeout-minutes: 5
+        shell: pwsh        
+        env:
+          BEAM_DEPLOYER_REFRESH_TOKEN: ${{ secrets.BEAM_DEPLOYER_REFRESH_TOKEN }}
+          BEAMABLE_CID: ${{ vars.BEAMABLE_CID }}
+          BEAMABLE_PID: ${{ vars.BEAMABLE_PID }}
+          BEAMABLE_MICROSERVICE_ROOT: ${{ vars.BEAMABLE_MICROSERVICE_ROOT }}
+        run: |
+          Set-Location "$env:BEAMABLE_MICROSERVICE_ROOT"
+          dotnet tool restore
+          dotnet beam login --save-to-file --refresh-token $env:BEAM_DEPLOYER_REFRESH_TOKEN --cid $env:BEAMABLE_CID --pid $env:BEAMABLE_PID
+
+      
+      - name: Build Microservices
+        timeout-minutes: 15
+        shell: pwsh        
+        env:
+          BEAMABLE_MICROSERVICE_ROOT: ${{ vars.BEAMABLE_MICROSERVICE_ROOT }}
+        run: |
+          Set-Location "$env:BEAMABLE_MICROSERVICE_ROOT"
+          $sln = Get-ChildItem -Filter *.sln | Select-Object -First 1
+          if ($sln) {
+            dotnet restore $sln.Name
+            dotnet build $sln.Name --configuration Release
+          } else {
+            Write-Error "No .sln file found in $env:BEAMABLE_MICROSERVICE_ROOT"
+            exit 1
+          }        
+
+      - name: Deploy Microservices
+        timeout-minutes: 15
+        shell: pwsh
+        env:
+          BEAM_DEPLOYER_REFRESH_TOKEN: ${{ secrets.BEAM_DEPLOYER_REFRESH_TOKEN }}
+          BEAMABLE_CID: ${{ vars.BEAMABLE_CID }}
+          BEAMABLE_PID: ${{ vars.BEAMABLE_PID }}
+          BEAMABLE_MICROSERVICE_ROOT: ${{ vars.BEAMABLE_MICROSERVICE_ROOT }}
+        run: |
+          Set-Location "$env:BEAMABLE_MICROSERVICE_ROOT"
+          dotnet beam deploy plan --refresh-token $env:BEAM_DEPLOYER_REFRESH_TOKEN --cid $env:BEAMABLE_CID --pid $env:BEAMABLE_PID
+          dotnet beam deploy release --latest-plan -q --refresh-token $env:BEAM_DEPLOYER_REFRESH_TOKEN --cid $env:BEAMABLE_CID --pid $env:BEAMABLE_PID

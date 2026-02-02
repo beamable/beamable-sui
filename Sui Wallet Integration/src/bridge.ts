@@ -1,0 +1,152 @@
+import { getWallets, Wallet, WalletAccount, StandardConnect, StandardDisconnect, StandardDisconnectFeature, StandardConnectFeature, SuiSignPersonalMessageFeature, SuiSignTransactionFeature  } from "@mysten/wallet-standard";
+import { registerSlushWallet, SLUSH_WALLET_NAME } from '@mysten/slush-wallet';
+
+registerSlushWallet("Beam Stashed");
+
+let cachedWallets: Wallet[] = [];
+let connectedAccount: WalletAccount | undefined;
+
+async function loadInstalledWallets(): Promise<Wallet[]> {
+    return Array.from(getWallets().get());
+}
+
+async function getStoredWallets(): Promise<Wallet[]> {
+    if (cachedWallets.length === 0) {
+        cachedWallets = await loadInstalledWallets();
+    } 
+    return cachedWallets;
+}
+
+async function getSelectedWallet(name: string): Promise<Wallet | undefined> {
+    const wallets = await getStoredWallets();
+    const wallet = wallets.find(w => w.name === name);
+    return wallet;
+}
+
+async function getConnectedAccount(name: string): Promise<WalletAccount | undefined> {
+    if (connectedAccount == undefined) {
+        connectedAccount = await connectAccount(name);
+    } 
+    return connectedAccount;
+}
+
+async function connectAccount(name: string): Promise<WalletAccount | undefined> {
+    try {
+        const wallet = await getSelectedWallet(name);
+        const connectFeature = wallet!.features[StandardConnect] as StandardConnectFeature[typeof StandardConnect];
+        const result = await connectFeature.connect();
+        connectedAccount = result.accounts[0];
+        return connectedAccount;        
+
+    } catch (error) {
+        console.error("Connection failed:", error);
+    }
+}
+
+export async function openWallet(name: string) {
+    try {
+        const wallet = await getSelectedWallet(name);
+        const connectFeature = wallet!.features[StandardConnect] as StandardConnectFeature[typeof StandardConnect];
+        await connectFeature.connect();        
+        if (name == SLUSH_WALLET_NAME) {
+            window.open("https://my.slush.app", "_blank");
+        }
+
+    } catch (error) {
+        console.error("Connection failed:", error);
+    }
+}
+
+export async function loadWallets(): Promise<string[]> {
+    try {
+        return (await getStoredWallets()).map(w => w.name);
+    } catch (error) {
+        console.error("Error loading wallets:", error);
+        return [];
+    }
+}
+
+export async function connectWallet(name: string): Promise<string> {        
+    try {
+        const account = await getConnectedAccount(name);
+        return account?.address ?? "";
+    } catch (error) {
+        console.error("Connection failed:", error);
+        return "";
+    }
+}
+
+export async function disconnectWallet(name: string): Promise<void> { 
+    try {
+        const wallet = await getSelectedWallet(name);
+        if (wallet == undefined) {
+            return;
+        }
+        const feature = wallet.features[StandardDisconnect] as StandardDisconnectFeature[typeof StandardDisconnect];
+        await feature.disconnect();
+        connectedAccount = undefined;
+        cachedWallets = [];
+    } catch (error) {
+        console.error("Disconnect failed:", error);
+        return;
+    }
+}
+
+export async function signMessage(name: string, message: string): Promise<string> {
+    if (!message) {
+        return "";
+    }
+
+    const wallet = await getSelectedWallet(name);
+
+    if (wallet == undefined) {
+        return "";
+    }
+
+    try {
+        const connectFeature = wallet.features[StandardConnect] as StandardConnectFeature[typeof StandardConnect];
+        const connectOutput = await connectFeature.connect();
+        const signMessageFeature = wallet.features["sui:signPersonalMessage"] as SuiSignPersonalMessageFeature["sui:signPersonalMessage"];
+        const signedMessage = await signMessageFeature.signPersonalMessage({
+            message: new TextEncoder().encode(message),
+            account: connectOutput.accounts[0], 
+          });
+        return signedMessage.signature;
+                
+    } catch (error) {
+        console.error("Signing failed:", error);
+        return "";
+    }
+}
+
+export async function signTransaction(name: string, transactionBytes: Uint8Array): Promise<string> {
+    if (!transactionBytes || transactionBytes.length === 0) {
+    throw new Error("Missing transaction bytes to sign.");
+  }
+  
+    const wallet = await getSelectedWallet(name);
+
+    if (wallet == undefined) {
+        return "";
+    }
+
+    try {
+        const connectFeature = wallet.features[StandardConnect] as StandardConnectFeature[typeof StandardConnect];
+        const connectOutput = await connectFeature.connect();
+        const signTransactionFeature = wallet.features["sui:signTransaction"] as SuiSignTransactionFeature["sui:signTransaction"];
+        const signedTransaction = await signTransactionFeature.signTransaction({
+            transaction: {
+                toJSON: async () => {
+                    return Buffer.from(transactionBytes).toString("base64");
+                },
+            },
+            account: connectOutput.accounts[0], 
+            chain: "sui:devnet",
+          });
+        return signedTransaction.signature;
+                
+    } catch (error) {
+        console.error("Signing failed:", error);
+        return "";
+    }
+}
